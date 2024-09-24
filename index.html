@@ -27,49 +27,48 @@
   </head>
   <body>
     <div class="min-h-screen bg-gray-50">
-      <!-- Header -->
-      <header
-        class="sticky top-0 flex flex-col md:flex-row items-center p-5 bg-yellow-50 space-y-4"
-      >
-        <!-- Blog Button wrapped in an anchor tag to open in a new tab -->
-        <a href="blog.html" target="_blank">
+      <!-- Navbar -->
+      <nav class="sticky top-0">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center p-5 bg-yellow-50">
+          <!-- Blog Button wrapped in an anchor tag to open in a new tab -->
+          <a href="blog.html" target="_blank">
+            <button
+              class="text-xl font-bold bg-green-500 text-white border border-green-600 rounded-lg px-4 py-2 hover:bg-green-600 transition duration-300"
+            >
+              Blog
+            </button>
+          </a>
+
+          <div class="flex-grow flex items-center justify-center space-x-2">
+            <img src="assets/logo.png" alt="Logo" class="w-8 h-8" />
+            <span class="text-2xl font-bold">Donate Bangladesh</span>
+          </div>
+
+          <div class="flex items-center">
+            <img src="assets/coin.png" alt="Coin Icon" class="w-6 h-6 mr-1" />
+            <span id="totalBalance" class="text-yellow-500 font-bold"
+              >100000 BDT</span
+            >
+          </div>
+        </header>
+
+        <!-- Button Tabs -->
+        <div class="flex justify-center space-x-6 py-2 backdrop-blur-md">
           <button
-            class="text-xl font-bold bg-green-500 text-white border border-green-600 rounded-lg px-4 py-2 hover:bg-green-600 transition duration-300"
+            id="donationTab"
+            class="px-6 py-2 bg-green-500 text-white rounded-lg font-medium"
           >
-            Blog
+            Donation
           </button>
-        </a>
-
-        <div class="flex-grow flex items-center justify-center space-x-2">
-          <img src="assets/logo.png" alt="Logo" class="w-8 h-8" />
-          <span class="text-2xl font-bold">Donate Bangladesh</span>
-        </div>
-
-        <div class="flex items-center">
-          <img src="assets/coin.png" alt="Coin Icon" class="w-6 h-6 mr-1" />
-          <span id="totalBalance" class="text-yellow-500 font-bold"
-            >100000 BDT</span
+          <button
+            id="historyTab"
+            class="px-6 py-2 bg-white text-gray-700 border rounded-lg font-medium"
           >
+            History
+          </button>
         </div>
-      </header>
-
-      <!-- Button tabs -->
-      <div
-        class="button-tabs sticky flex justify-center space-x-6 py-4 bg-white opacity-70"
-      >
-        <button
-          id="donationTab"
-          class="px-6 py-2 bg-green-500 text-white rounded-lg font-medium"
-        >
-          Donation
-        </button>
-        <button
-          id="historyTab"
-          class="px-6 py-2 bg-white text-gray-700 border rounded-lg font-medium"
-        >
-          History
-        </button>
-      </div>
+      </nav>
 
       <!-- Donation Section -->
       <div id="donationSection" class="container mx-auto py-10 px-5 space-y-8">
@@ -190,9 +189,8 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- History Section -->
+      <!-- History Section -->
       <div
         id="historySection"
         class="container mx-auto py-10 px-5 rounded-xl hidden"
@@ -229,6 +227,7 @@
       </div>
     </div>
 
+    <!-- Added JavaScript -->
     <script src="javascript/index.js"></script>
   </body>
 </html>
