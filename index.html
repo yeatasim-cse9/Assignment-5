@@ -192,6 +192,43 @@
       </div>
     </div>
 
+    <!-- History Section -->
+      <div
+        id="historySection"
+        class="container mx-auto py-10 px-5 rounded-xl hidden"
+      >
+        <h2 class="text-lg font-bold mb-4">Donation History</h2>
+        <div class="flex flex-col space-y-4">
+          <ul id="historyList" class="space-y-4">
+            <!-- Donation history will be appended here -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Success Modal -->
+      <div
+        id="successModal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex justify-center items-center"
+      >
+        <div class="bg-white p-6 rounded-lg shadow text-center space-y-4">
+          <h2 class="text-2xl font-bold mb-4">Congratulation!</h2>
+          <div class="flex justify-center">
+            <img src="assets/coin.png" alt="" class="w-10 h-10" />
+          </div>
+          <p class="text-sm">
+            You Have Donated For Humankind <br />
+            <span class="font-bold">Successfully</span>
+          </p>
+          <button
+            id="closeModal"
+            class="mt-4 bg-slate-500 text-sm text-white px-4 py-2 rounded"
+          >
+            Close Confirmation
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="javascript/index.js"></script>
   </body>
 </html>
